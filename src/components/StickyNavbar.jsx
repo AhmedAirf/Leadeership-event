@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, Typography, Button } from "@material-tailwind/react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 
 const StickyNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -9,13 +9,13 @@ const StickyNavbar = () => {
 
   return (
     <div>
-      <Navbar className="sticky top-0 z-10 h-max w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-nav">
+      <Navbar className="sticky top-0 z-10 h-max w-full max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-nav ">
         <div className="flex items-center justify-between text-white">
           {/* Logo */}
           <Typography
-            as={Link} // Use Link for the logo
+            as={Link}
             to="/"
-            className="ml-12 cursor-pointer py-1.5 text-cyan-400 text-xl font-bold leading-tight"
+            className="ml-12 cursor-pointer py-1.5 text-cyan-400 text-xl font-bold leading-tight flex"
           >
             Leadership <br /> Event
           </Typography>
@@ -40,7 +40,7 @@ const StickyNavbar = () => {
                 >
                   <Link
                     to={item.path} // Use Link for navigation
-                    className="flex items-center text-gray-300 hover:text-cyan-400 transition"
+                    className="flex items-center text-gray-300 hover:text-cyan-400 transition  focus:text-cyan-400"
                   >
                     {item.name}
                   </Link>
@@ -72,7 +72,7 @@ const StickyNavbar = () => {
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-6 w-6 "
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -88,7 +88,7 @@ const StickyNavbar = () => {
 
           {/* Buy Ticket Button - Desktop */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button className="bg-blue-500 hover:bg-blue-600 transition rounded-2xl px-4 py-2 text-white">
+            <Button className="bg-secondary hover:bg-blue-600 transition rounded-2xl px-4 py-2 text-white">
               Buy Tickets
             </Button>
           </div>
@@ -114,14 +114,14 @@ const StickyNavbar = () => {
               >
                 <Link
                   to={item.path} // Use Link for navigation
-                  className="flex items-center text-gray-300 hover:text-cyan-400 transition"
+                  className="flex items-center text-gray-300 hover:text-cyan-400 transition  focus:text-cyan-400 "
                 >
                   {item.name}
                 </Link>
               </Typography>
             ))}
             {/* Buy Ticket Button - Mobile */}
-            <Button className="mt-2 bg-blue-500 hover:bg-blue-600 transition rounded-2xl text-white w-full">
+            <Button className="mt-2 bg-secondary hover:bg-blue-600 transition rounded-2xl text-white w-full">
               Buy Tickets
             </Button>
           </ul>
