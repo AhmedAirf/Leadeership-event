@@ -10,18 +10,23 @@ module.exports = withMT({
     "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+    },
     extend: {
       colors: {
-        nav: "#273053",
+        nav: "#000035",
         primary: "#0dcaf0",
         secondary: "#0d6efd",
         P: "#717275",
+        section: "#f0f8ff",
       },
       fontFamily: {
         main: ["DM Sans", "sans-serif"],
       },
       fontWeight: {
-        normal: 400, // Removed the extra `0` here
+        normal: 400,
       },
     },
   },
