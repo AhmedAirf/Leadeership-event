@@ -10,7 +10,7 @@ const StickyNavbar = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Speakers", path: "/speakers" },
-    { name: "Schedule", path: "/schedule" },
+    { name: "Schedules", path: "/schedules" },
     { name: "Pricing", path: "/pricing" },
     { name: "Venue", path: "/venue" },
     { name: "Contact", path: "/contact" },
@@ -41,22 +41,24 @@ const StickyNavbar = () => {
               >
                 <Link
                   to={item.path}
-                  className="flex items-center text-white/90 hover:text-white transition-colors duration-200 text-sm font-medium"
+                  className="flex items-center text-white/90 hover:text-white transition-colors duration-200 text-sm font-medium "
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full " />
                 </Link>
               </Typography>
             ))}
           </ul>
 
           {/* Desktop CTA Button */}
-          <Button
-            size="sm"
-            className="bg-primary hover:bg-primary-dark rounded-full px-6 py-2.5 text-sm font-semibold transition-colors duration-300"
-          >
-            Buy Tickets
-          </Button>
+          <Link to={"/pricing"}>
+            <Button
+              fullWidth
+              className="mt-4 bg-primary hover:bg-primary-dark rounded-full py-3 text-sm font-semibold transition-colors duration-300"
+            >
+              Buy Tickets
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -90,12 +92,14 @@ const StickyNavbar = () => {
           ))}
 
           {/* Mobile CTA Button */}
-          <Button
-            fullWidth
-            className="mt-4 bg-primary hover:bg-primary-dark rounded-full py-3 text-sm font-semibold transition-colors duration-300"
-          >
-            Buy Tickets
-          </Button>
+          <Link to={"/pricing"}>
+            <Button
+              fullWidth
+              className="mt-4 bg-primary hover:bg-primary-dark rounded-full py-3 text-sm font-semibold transition-colors duration-300"
+            >
+              Buy Tickets
+            </Button>
+          </Link>
         </ul>
       </div>
     </Navbar>

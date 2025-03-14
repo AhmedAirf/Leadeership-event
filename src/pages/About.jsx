@@ -21,7 +21,10 @@ const About = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-3 md:gap-4 mt-4">
               <Link to={"/speakers"}>
-                <Button className="bg-primary rounded-full py-3 px-8 text-sm md:text-base ">
+                <Button
+                  variant="outlined"
+                  className="text-primary border-primary rounded-full py-3 px-8 text-sm hover:bg-primary hover:text-white md:text-base "
+                >
                   Meet Speakers
                 </Button>
               </Link>
