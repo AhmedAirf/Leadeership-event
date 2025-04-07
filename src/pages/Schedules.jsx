@@ -24,10 +24,9 @@ const Schedules = () => {
                   Startup Development Ideas
                 </h1>
                 <p className="text-gray-600 prose">
-                  You are free to download any HTML CSS template from TemplateMo
-                  website. You can use any template for business purposes. You
-                  are not allowed to redistribute the downloadable ZIP file on
-                  any other template website. Thank you.
+                  Leadership Event is a multi-page Tailwind CSS layout for your
+                  website. Created by AHMED, available for contact to create
+                  more amazing websites.
                 </p>
               </div>
 
